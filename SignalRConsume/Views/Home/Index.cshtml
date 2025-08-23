@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Scripts{
+    <script src="c:\users\emre\source\repos\traversalcoreproject\signalrconsume\wwwroot\lib\microsoft\signalr\dist\browser\signalr.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(()=>{
+            var connection=new signalR.HubConnectionBuilder().withUrl("http://localhost:5261/VisitorHub").build();
+            $("#connectionStatus").text(connection.connectionState);
+            connection.start().then(()=>{
+                 $("#connectionStatus").text(connection.connectionState);
+            }).catch((error)=>{console.log(error)});
+        })    
+    </script>
+}
+
+<div class="container">
+    <br />
+    <div class="alert alert-warning">
+        baglantinizin durumu: <b id="connectionStatus"></b>
+    </div>
+</div> 

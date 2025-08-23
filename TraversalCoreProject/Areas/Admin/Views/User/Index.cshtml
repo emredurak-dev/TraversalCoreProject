@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int sayac = 0;
+}
+
+<h1>kullanici listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>ad soyad</th>
+        <th>kullanici adi</th>
+        <th>email</th>
+        <th>sil</th>
+        <th>duzenle</th>
+        <th>yorumlar</th>
+        <th>tur gecmisi</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            @{
+                sayac = sayac + 1;
+            }
+            <td>@sayac</td>
+            <td>@item.Name @item.Surname</td>
+            <td>@item.UserName</td>
+            <td>@item.Email</td>
+            <td><a href="/Admin/User/DeleteUser/@item.Id" class="btn btn-outline-danger">sil</a></td>
+            <td><a href="/Admin/User/EditUser/@item.Id" class="btn btn-outline-success">duzenle</a></td>
+            <td><a href="/Admin/User/CommentUser/@item.Id" class="btn btn-outline-info">yorumlar</a></td>
+            <td><a href="/Admin/User/ReservationUser/@item.Id" class="btn btn-outline-primary">tur gecmisi</a></td>
+        </tr>
+    }
+</table>
+<td><a href="/Login/SignUp/" class="btn btn-primary">yeni kullanici ekle</a></td>

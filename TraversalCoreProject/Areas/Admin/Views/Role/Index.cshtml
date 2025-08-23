@@ -1,0 +1,44 @@
+﻿@model List<AppRole>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>rol listesi</h1>
+
+
+@if (Model.Count > 0)
+{
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>rol adi</th>
+            <th>rolu sil</th>
+            <th>rolu duzenle</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Name</td>
+                <td><a href="/Admin/Role/DeleteRole/@item.Id" class="btn btn-danger">sil</a></td>
+                <td><a href="/Admin/Role/UpdateRole/@item.Id" class="btn btn-primary">duzenle</a></td>
+            </tr>
+        }
+
+
+    </table>
+}
+
+else
+{
+    <div class="alert alert-warning">
+        <span class="text text-danger">her hangi bir rol bulunamadi</span>
+    </div>
+}
+
+
+<a href="/Admin/Role/CreateRole/" class="btn btn-info">yeni rol ekle</a>

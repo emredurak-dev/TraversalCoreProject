@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Reservation>
+@{
+	ViewData["Title"] = "ReservationUser";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+
+<h1>kullanicinin gecmis rezervasyonlari</h1>
+
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>misafir ad soyad</th>
+		<th>rota</th>
+		<th>kisi sayisi</th>
+		<th>tarih</th>
+		<th>detaylar</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+
+		<tr>
+			@{
+				count = count + 1;
+			}
+			<td>@count</td>
+			<td>###</td>
+			<td>@item.Destination.City</td>
+			<td>@item.PersonCount</td>
+			<td>@(((DateTime)item.ReservationDate).ToString("dd-MMM-yyyy"))</td>
+			<td><a href="#" class="btn btn-outline-primary">detaylar</a></td>
+		</tr>
+	}
+</table>
+

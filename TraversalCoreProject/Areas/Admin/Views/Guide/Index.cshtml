@@ -1,0 +1,51 @@
+﻿@using EntityLayer.Concrete
+@model List<Guide>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	int count = 0;
+}
+<style>
+	img {
+		border-radius: 50%;
+	}
+</style>
+<h1>rehber listesi</h1>
+<table class="table table-bordered">
+	<tr>
+		<th>#</th>
+		<th>gorsel</th>
+		<th>ad soyad</th>
+		<th>aciklama</th>
+		<th>durum</th>
+		<th>duzenle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			@{
+				count = count + 1;
+			}
+			<td>@count</td>
+			<td><img src="@item.Image" height="50" width="50" /></td>
+			<td>@item.Name</td>
+			<td>@item.Description</td>
+
+
+			@{
+				if (item.Status == true)
+				{
+					<td><a href="/Admin/Guide/ChangeToFalse/@item.GuideId" class="btn btn-outline-danger">pasif yap</a></td>
+				}
+				else
+				{
+					<td><a href="/Admin/Guide/ChangeToTrue/@item.GuideId" class="btn btn-outline-success">aktif yap</a></td>
+				}
+			}
+
+
+			<td><a href="/Admin/Guide/EditGuide/@item.GuideId" class="btn btn-outline-info">duzenle</a></td>
+		</tr>
+	}
+</table>
+<a href="/Admin/Guide/AddGuide/" class="btn btn-outline-primary">yeni rehber girisi</a>

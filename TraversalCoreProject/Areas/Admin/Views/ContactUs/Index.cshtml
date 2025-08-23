@@ -1,0 +1,31 @@
+﻿@model List<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>bize ulasin mesajlari</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>gonderen</th>
+        <th>konu</th>
+        <th>tarih</th>
+        <th>sil</th>
+        <th>mesaji ac</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.MessageDate.ToString("dd.MMM.yyyy")</td>
+            <td><a href="#" class="btn btn-outline-danger">sil</a></td>
+            <td><a href="#" class="btn btn-outline-info">guncelle</a></td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,29 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+	
+
+<div class="leave-comment-form mt-5" id="reply">
+	<h4 class="side-title mb-2">bir yorum birakin</h4>
+	<p class="mb-4">
+		isaretli alanlari doldurmaniz gerekmektedir.
+	</p>
+	<form method="post" asp-action="AddComment" asp-controller="Comment">
+		<input type="hidden" name="DestinationId" value="@ViewBag.destId" />
+		<input type="hidden" name="AppUserId" value="@ViewBag.userId" />
+		<input type="hidden" name="CommentUser" value="@ViewBag.userName" />
+		<div class="form-group">
+			<textarea name="CommentContent" class="form-control" placeholder="yorumunuz*" required=""
+					  spellcheck="false"></textarea>
+		</div>
+
+		<div class="submit text-right">
+			<button class="btn btn-style btn-primary">yorum yap </button>
+		</div>
+	</form>
+</div>
+}
+
+else
+{
+	<h2>yorum yapabilmek icin giris yapmalisiniz.</h2>
+}

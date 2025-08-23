@@ -1,0 +1,71 @@
+﻿﻿@using EntityLayer.Concrete
+@model List<Destination>
+@{
+    ViewData["Title"] = "GetCitiesSearchByName";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">tur rotasi arama sayfasi</h4>
+                    <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                    <div class="heading-elements">
+                        <ul class="list-inline mb-0">
+                            <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                            <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                            <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                            <li><a data-action="close"><i class="ft-x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-content collapse show">
+                    <div class="card-body">
+                        <p class="card-text">alaninda uzman rehberlerimiz esliginde balkanlardan orta asya'ya, dogu avrupa'dan anadolu'nun dort bir yanina en uygun fiyatlarla sundugumuz tur listemize ve tur detaylarina asagidaki tablodan erisebilirsiniz.</p>
+
+                        <form asp-action="GetCitiesSearchByName" method="get" asp-area="Member">
+                            <div>
+                                <p>
+                                    <b>lutfen aranacak sehri giriniz:</b> <input type="text" name="searchString" class="form-control" value="@ViewData["CurrentFilter"]" />
+                                    <br />
+                                    <input type="submit" value="sehir ara" class="btn btn-dark" />
+                                </p>
+                            </div>
+                        </form>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>sehir</th>
+                                        <th>sure</th>
+                                        <th>kapasite</th>
+                                        <th>fiyat</th>
+                                        <th>detaylar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <th>@item.DestinationId</th>
+                                            <td>@item.City</td>
+                                            <td>@item.DayNight</td>
+                                            <td>@item.Capacity</td>
+                                            <td>@item.Price₺</td>
+                                            <td><a href="/Destination/DestinationDetails/@item.DestinationId" class="btn btn-outline-info">detaylar</a></td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
