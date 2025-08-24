@@ -216,27 +216,40 @@ dotnet run --project SignalRConsume
 - Database indexing
 - Lazy loading implementation
 
-## 📸 Screenshots
+## 🖼️ Screenshots
+## 🔐 Authentication
 
+### 🔑 Login
+<img width="1919" height="1076" alt="Screenshot 2025-08-24 012325" src="https://github.com/user-attachments/assets/f0bdad0f-1272-4a13-a93a-0ca1119452ea" />
+
+### 📝 Register
+<img width="1919" height="1079" alt="Screenshot 2025-08-24 012330" src="https://github.com/user-attachments/assets/14fedc13-7e77-43dd-8fda-57bb7ee424a0" />
+
+## 🌐 Website
+
+### 🧭 UI
 <img width="1920" height="5081" alt="screencapture-localhost-44321-Default-Index-2025-08-24-00_54_29" src="https://github.com/user-attachments/assets/463ba6af-be0d-4d7e-b037-0846f2ee8467" />
 <img width="1902" height="978" alt="Screenshot 2025-08-24 005313" src="https://github.com/user-attachments/assets/87ae515b-150c-4274-bb5f-c7fa09e9fb1b" />
 <img width="1920" height="5106" alt="screencapture-localhost-44321-Destination-DestinationDetails-1-2025-08-24-00_53_33" src="https://github.com/user-attachments/assets/60382537-708f-4ad5-91e0-89e096ea716c" />
 <img width="1920" height="1426" alt="screencapture-localhost-44321-Guide-Index-2025-08-24-00_53_53" src="https://github.com/user-attachments/assets/c85f7822-4008-4e9f-9146-ee1454394330" />
 <img width="1920" height="1908" alt="screencapture-localhost-44321-Contact-Index-2025-08-24-00_54_08" src="https://github.com/user-attachments/assets/74ac73c1-db59-4453-914f-8fde9038043b" />
 
-### 👑 Admin Panel
+### 🛠️ Admin Panel
 <img width="1920" height="1286" alt="screencapture-localhost-44321-Admin-Dashboard-Index-2025-08-24-00_55_08" src="https://github.com/user-attachments/assets/7b2ec946-ef82-451c-a4e7-e4d904450fa8" />
 <img width="1920" height="945" alt="screencapture-localhost-44321-Admin-Destination-Index-2025-08-24-00_55_24" src="https://github.com/user-attachments/assets/302a8c50-173a-483d-8b66-b241d4e1b9f8" />
 <img width="1920" height="945" alt="screencapture-localhost-44321-Admin-Role-Index-2025-08-24-00_56_54" src="https://github.com/user-attachments/assets/38207bf8-892f-4113-9f7f-2050a02cbd27" />
 
-### 👥 Member Panel
+### 👤 Member Panel
 <img width="1365" height="2322" alt="screencapture-localhost-44321-Member-Dashboard-MemberDashboard-2025-08-24-00_58_10" src="https://github.com/user-attachments/assets/0418ca7c-3875-4ff8-975b-2c10905bab0c" />
 <img width="1920" height="1048" alt="screencapture-localhost-44321-Member-LastDestinations-Index-2025-08-24-00_58_32" src="https://github.com/user-attachments/assets/1bc5c433-07a3-454c-8615-aec67798e9b5" />
 <img width="259" height="804" alt="Screenshot 2025-08-24 005934" src="https://github.com/user-attachments/assets/64d78931-5650-4ae5-93fc-2c0cbd48fe9b" />
 <img width="255" height="777" alt="Screenshot 2025-08-24 005946" src="https://github.com/user-attachments/assets/39b4f1b6-cb16-4dfa-aaed-625386159a01" />
 
-### 📊 SignalR
+### 📡 Real-Time (SignalR)
 <img width="1919" height="1079" alt="Screenshot 2025-08-24 011543" src="https://github.com/user-attachments/assets/76ef9c5b-3ec8-478b-945c-8bbae60beafd" />
+
+## 🚫 404 Error
+<img width="1919" height="1079" alt="Screenshot 2025-08-24 012400" src="https://github.com/user-attachments/assets/b6a92995-a950-4bd1-9509-17681b145a73" />
 
 ## 🤝 Contributing
 
